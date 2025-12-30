@@ -1,6 +1,6 @@
 # Understand and Document Source API
 
-## Purpose
+## Goal 
 
 Create a comprehensive API documentation file that enables connector implementation. The document must be **complete, source-cited, and implementation-ready**—covering endpoints, authentication, schemas, pagination, and incremental sync strategy.
 

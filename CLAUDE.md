@@ -56,10 +56,12 @@ python scripts/merge_python_source.py {source_name}
 
 ## Development Workflow
 
-1. **Document Source API**: 
-2. **Implement Connector**:
-3. **Run Tests**: 
-4. **Create Documentation**: 
+1. **Understand the source** — Gather API specs, auth mechanisms, and schemas using the provided template
+2. **Implement the connector** — Implement the `LakeflowConnect` interface methods
+3. **Test & iterate** — Run the standard test suites against a real source system
+   - *(Optional)* Implement write-back testing for end-to-end validation (write → read → verify cycle)
+4. **Generate documentation** — Create user-facing docs using the documentation template
+   - *(Temporary)* Run `scripts/merge_python_source.py` to generate the deployable file
 
 ## Implementation Guidelines
 

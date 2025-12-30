@@ -184,7 +184,7 @@ Add a new section `## Write-Back APIs (For Testing Only)` to your existing `sour
 
 Add this section to your API doc:
 
-```markdown
+````markdown
 ## Write-Back APIs (For Testing Only)
 
 **⚠️ WARNING: These APIs are documented solely for test data generation. They are NOT part of the connector's read functionality.**
@@ -256,6 +256,7 @@ Follow the same rigorous research process as Step 1:
 - [ ] Eventual consistency delays documented (if applicable)
 - [ ] Research log completed with sources
 
+````
 ---
 
 ## Step 6: Implement Write-Back Testing (Optional)
