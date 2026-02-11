@@ -1,0 +1,36 @@
+# Duck Creek XML Community Connector Spec
+# This file defines the specification for the connector including
+# connection parameters and allowlist options.
+
+# ============================================================================
+# Connection Parameters
+# These are provided when creating the Unity Catalog connection.
+# ============================================================================
+connection:
+  parameters:
+    - name: file_path
+      type: string
+      required: true
+      description: >
+        Path to the directory containing Duck Creek XML files.
+        This can be a local filesystem path or a Unity Catalog volume path.
+        For Unity Catalog volumes, use the format: /Volumes/catalog/schema/volume_name/
+        Example: /Volumes/insurance_data/raw/duck_creek_exports/
+
+    - name: file_pattern
+      type: string
+      required: false
+      default: "*.xml"
+      description: >
+        Glob pattern to match XML files in the specified directory.
+        Default is "*.xml" which matches all XML files.
+        Use patterns like "Policy*.xml" to filter specific file types.
+
+# ============================================================================
+# External Options Allowlist
+# These table-specific options must be included in the externalOptionsAllowList
+# parameter of the UC connection to allow them to be passed through.
+# Use a comma-separated string of option names.
+# If no table-specific options are needed, set to empty string or omit.
+# ============================================================================
+external_options_allowlist: ""
