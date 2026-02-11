@@ -7,13 +7,23 @@
 
 from datetime import datetime
 from decimal import Decimal
-from typing import Any, Iterator
+from typing import (
+    Any,
+    Dict,
+    Iterator,
+    List,
+    Optional,
+    Tuple,
+)
 import json
+import os
 
 from pyspark.sql import Row
 from pyspark.sql.datasource import DataSource, DataSourceReader, SimpleDataSourceStreamReader
 from pyspark.sql.types import *
 import base64
+import glob
+import xml.etree.ElementTree as ET
 
 
 def register_lakeflow_source(spark):
@@ -205,30 +215,6 @@ def register_lakeflow_source(spark):
     ########################################################
     # sources/duck_creek/duck_creek.py
     ########################################################
-
-    Duck Creek XML Connector for Lakeflow.
-
-    This connector reads Duck Creek policy XML files from a file location
-    (local filesystem or Unity Catalog volume) and extracts data into
-    normalized tables.
-    """
-
-    import os
-    import glob
-    import xml.etree.ElementTree as ET
-    from datetime import datetime
-    from typing import Dict, List, Iterator, Any, Optional, Tuple
-    from pyspark.sql.types import (
-        StructType,
-        StructField,
-        StringType,
-        LongType,
-        DoubleType,
-        BooleanType,
-        ArrayType,
-        MapType,
-    )
-
 
     class LakeflowConnect:
         """

@@ -1,11 +1,3 @@
-"""
-Duck Creek XML Connector for Lakeflow.
-
-This connector reads Duck Creek policy XML files from a file location
-(local filesystem or Unity Catalog volume) and extracts data into
-normalized tables.
-"""
-
 import os
 import glob
 import xml.etree.ElementTree as ET
